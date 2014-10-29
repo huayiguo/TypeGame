@@ -19,12 +19,10 @@ public class FullscreenActivity extends Activity {
 		setContentView(R.layout.activity_fullscreen);
 		TextView text = (TextView)findViewById(R.id.textView);
 		answer = text.getText().toString();
-		text.setText("hello yo");
 		Button submit = (Button)findViewById(R.id.submit);
 		submit.setOnClickListener(new submitlistener());
 		Button quit = (Button)findViewById(R.id.quit);
 		quit.setOnClickListener(new quitlistener());
-		System.out.println("finished");
 	}
 	
 	class quitlistener implements OnClickListener{
@@ -43,9 +41,9 @@ public class FullscreenActivity extends Activity {
 			EditText inputView = (EditText)findViewById(R.id.Edit);
 			String input = inputView.getText().toString();
 			if(input.equals(answer)){
-				Toast.makeText(getApplicationContext(), "That's right!", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), "You are right!", Toast.LENGTH_LONG).show();
 			}else{
-				Toast.makeText(getApplicationContext(), "That's wrong!", Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), "You are wrong!", Toast.LENGTH_LONG).show();
 			}
 			
 		}
